@@ -1,5 +1,5 @@
 class Programa:
-    def __init__(self, he, st, ar, fo, stp, sf, ind):
+    def inici(self, he, st, ar, fo, stp, sf, ind):
         self.header=he
         self.modelostep=st
         self.archivo=ar
@@ -43,6 +43,6 @@ class Programa:
         archivodef.close()
 
 nuevoprograma = Programa()
-nuevoprograma.__init__('header.html','modelostep.html','step01.txt','footer.html','previostep.html','step.html','index.html')
+nuevoprograma.inici('header.html','modelostep.html','step01.txt','footer.html','previostep.html','step.html','index.html')
 nuevoprograma.nuevoarchivo('verXX','step01','XXpassarpython')
 nuevoprograma.archivohtml()
