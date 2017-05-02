@@ -1,5 +1,5 @@
 class Programa:
-    def inicio(self, he, st, ar, fo, stp, sf, ind):
+    def __init__(self, he, st, ar, fo, stp, sf, ind):
         self.header=he
         self.modelostep=st
         self.archivo=ar
@@ -7,10 +7,8 @@ class Programa:
         self.nuevostep=stp
         self.step=sf
         self.index=ind
-    def nuevoarchivo(self):
-        idviejo = 'verXX'
-        idnuevo = 'step01'
-        token = 'XXpassarpython'
+    def nuevoarchivo(self, idviejo, idnuevo,token):
+
         abrirleerstep = open(self.modelostep,'r')
         leerstep = abrirleerstep.read()
         abrirleerstep.close()
@@ -45,6 +43,6 @@ class Programa:
         archivodef.close()
 
 nuevoprograma = Programa()
-nuevoprograma.inicio('header.html','modelostep.html','step01.txt','footer.html','previostep.html','step.html','index.html')
-nuevoprograma.nuevoarchivo()
+nuevoprograma.__init__('header.html','modelostep.html','step01.txt','footer.html','previostep.html','step.html','index.html')
+nuevoprograma.nuevoarchivo('verXX','step01','XXpassarpython')
 nuevoprograma.archivohtml()
